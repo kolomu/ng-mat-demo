@@ -1,0 +1,63 @@
+@import "../../../vars";
+
+footer {
+    background-color: $dark-color-1;
+    color: $white-color-1;
+
+    h4 {
+        text-transform: uppercase;
+    }
+
+    .wrapper {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    .about p,
+    .contact address,
+    .links ul {
+        line-height: 1.4em;
+    }
+
+    .contact {
+        .grid-wrapper {
+            display: grid;
+            grid-template-columns: 40px auto;
+        }
+
+        .icon {
+            display: grid;
+            align-items: center;
+        }
+    }
+
+    .links {
+        ul {
+            list-style-type: none;
+        }
+    }
+}
+
+@media (min-width: map-get($media-breakpoints, "sm")) {
+    footer .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (min-width: map-get($media-breakpoints, "lg")) {
+    footer .wrapper {
+        max-width: 1090px;
+        margin: 0 auto;
+        justify-content: space-between;
+        grid-template-columns: repeat(3, 300px);
+    }
+
+    .about {
+        grid-column: auto;
+    }
+}

@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./vars";
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+h4 {
+    line-height: 2em;
+}
+
+.mat-drawer-container {
+    height: 100%;
+}
+
+.link {
+    color: $link-color;
+    text-decoration: none;
+}
+
+.section {
+    padding: $padding-sm;
+}
